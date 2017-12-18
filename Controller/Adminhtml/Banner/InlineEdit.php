@@ -6,21 +6,21 @@ abstract class InlineEdit extends \Magento\Backend\App\Action
 {
     /**
      * JSON Factory
-     * 
+     *
      * @var \Magento\Framework\Controller\Result\JsonFactory
      */
     protected $jsonFactory;
 
     /**
      * Banner Factory
-     * 
+     *
      * @var \MediaLounge\Slider\Model\BannerFactory
      */
     protected $bannerFactory;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Controller\Result\JsonFactory $jsonFactory
      * @param \MediaLounge\Slider\Model\BannerFactory $bannerFactory
      * @param \Magento\Backend\App\Action\Context $context
@@ -29,8 +29,8 @@ abstract class InlineEdit extends \Magento\Backend\App\Action
         \Magento\Framework\Controller\Result\JsonFactory $jsonFactory,
         \MediaLounge\Slider\Model\BannerFactory $bannerFactory,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->jsonFactory   = $jsonFactory;
         $this->bannerFactory = $bannerFactory;
         parent::__construct($context);

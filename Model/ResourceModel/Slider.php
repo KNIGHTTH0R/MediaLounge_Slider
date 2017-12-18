@@ -5,28 +5,28 @@ class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
     /**
      * Date model
-     * 
+     *
      * @var \Magento\Framework\Stdlib\DateTime\DateTime
      */
     protected $date;
 
     /**
      * Banner relation model
-     * 
+     *
      * @var string
      */
     protected $sliderBannerTable;
 
     /**
      * Event Manager
-     * 
+     *
      * @var \Magento\Framework\Event\ManagerInterface
      */
     protected $eventManager;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Stdlib\DateTime\DateTime $date
      * @param \Magento\Framework\Event\ManagerInterface $eventManager
      * @param \Magento\Framework\Model\ResourceModel\Db\Context $context
@@ -35,8 +35,8 @@ class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
         \Magento\Framework\Stdlib\DateTime\DateTime $date,
         \Magento\Framework\Event\ManagerInterface $eventManager,
         \Magento\Framework\Model\ResourceModel\Db\Context $context
-    )
-    {
+    ) {
+    
         $this->date         = $date;
         $this->eventManager = $eventManager;
         parent::__construct($context);
@@ -128,8 +128,8 @@ class Slider extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
         $insert = array_diff_key($banners, $oldBanners);
         $delete = array_diff_key($oldBanners, $banners);
         $update = array_intersect_key($banners, $oldBanners);
-        $_update = array();
-        foreach ($update as $key=>$settings) {
+        $_update = [];
+        foreach ($update as $key => $settings) {
             if (isset($oldBanners[$key]) && $oldBanners[$key] != $settings['position']) {
                 $_update[$key] = $settings;
             }

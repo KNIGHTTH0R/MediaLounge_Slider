@@ -6,7 +6,7 @@ class Slider extends \Magento\Backend\Block\Widget\Form\Generic implements \Mage
 {
     /**
      * Status options
-     * 
+     *
      * @var \MediaLounge\Slider\Model\Slider\Source\Status
      */
     protected $_statusOptions;
@@ -23,7 +23,7 @@ class Slider extends \Magento\Backend\Block\Widget\Form\Generic implements \Mage
 
     /**
      * constructor
-     * 
+     *
      * @param \MediaLounge\Slider\Model\Slider\Source\Status $_statusOptions
      * @param \MediaLounge\Slider\Model\Slider\Source\Animation $_animationOptions
      * @param \Magento\Store\Model\System\Store $systemStore
@@ -40,8 +40,8 @@ class Slider extends \Magento\Backend\Block\Widget\Form\Generic implements \Mage
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
         array $data = []
-    )
-    {
+    ) {
+    
         $this->_statusOptions = $_statusOptions;
         $this->_animationOptions = $_animationOptions;
         $this->_systemStore = $systemStore;

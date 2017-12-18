@@ -6,14 +6,14 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**
      * Core registry
-     * 
+     *
      * @var \Magento\Framework\Registry
      */
     protected $coreRegistry;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Backend\Block\Widget\Context $context
      * @param array $data
@@ -22,8 +22,8 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Backend\Block\Widget\Context $context,
         array $data = []
-    )
-    {
+    ) {
+    
         $this->coreRegistry = $coreRegistry;
         parent::__construct($context, $data);
     }

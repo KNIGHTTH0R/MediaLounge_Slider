@@ -6,27 +6,27 @@ abstract class Banner extends \Magento\Backend\App\Action
 {
     /**
      * Banner Factory
-     * 
+     *
      * @var \MediaLounge\Slider\Model\BannerFactory
      */
     protected $bannerFactory;
 
     /**
      * Core registry
-     * 
+     *
      * @var \Magento\Framework\Registry
      */
     protected $coreRegistry;
 
     /**
      * Result redirect factory
-     * 
+     *
      * @var \Magento\Backend\Model\View\Result\RedirectFactory
      */
 
     /**
      * constructor
-     * 
+     *
      * @param \MediaLounge\Slider\Model\BannerFactory $bannerFactory
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Backend\Model\View\Result\RedirectFactory $resultRedirectFactory
@@ -36,8 +36,8 @@ abstract class Banner extends \Magento\Backend\App\Action
         \MediaLounge\Slider\Model\BannerFactory $bannerFactory,
         \Magento\Framework\Registry $coreRegistry,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->bannerFactory         = $bannerFactory;
         $this->coreRegistry          = $coreRegistry;
         parent::__construct($context);

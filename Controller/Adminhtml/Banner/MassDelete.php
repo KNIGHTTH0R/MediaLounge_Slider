@@ -6,21 +6,21 @@ class MassDelete extends \Magento\Backend\App\Action
 {
     /**
      * Mass Action Filter
-     * 
+     *
      * @var \Magento\Ui\Component\MassAction\Filter
      */
     protected $filter;
 
     /**
      * Collection Factory
-     * 
+     *
      * @var \MediaLounge\Slider\Model\ResourceModel\Banner\CollectionFactory
      */
     protected $collectionFactory;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Ui\Component\MassAction\Filter $filter
      * @param \MediaLounge\Slider\Model\ResourceModel\Banner\CollectionFactory $collectionFactory
      * @param \Magento\Backend\App\Action\Context $context
@@ -29,8 +29,8 @@ class MassDelete extends \Magento\Backend\App\Action
         \Magento\Ui\Component\MassAction\Filter $filter,
         \MediaLounge\Slider\Model\ResourceModel\Banner\CollectionFactory $collectionFactory,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->filter            = $filter;
         $this->collectionFactory = $collectionFactory;
         parent::__construct($context);

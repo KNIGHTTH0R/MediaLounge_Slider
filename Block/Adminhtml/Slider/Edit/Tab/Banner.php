@@ -6,28 +6,28 @@ class Banner extends \Magento\Backend\Block\Widget\Grid\Extended implements \Mag
 {
     /**
      * Banner collection factory
-     * 
+     *
      * @var \MediaLounge\Slider\Model\ResourceModel\Banner\CollectionFactory
      */
     protected $bannerCollectionFactory;
 
     /**
      * Registry
-     * 
+     *
      * @var \Magento\Framework\Registry
      */
     protected $coreRegistry;
 
     /**
      * Banner factory
-     * 
+     *
      * @var \MediaLounge\Slider\Model\BannerFactory
      */
     protected $bannerFactory;
 
     /**
      * constructor
-     * 
+     *
      * @param \MediaLounge\Slider\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \MediaLounge\Slider\Model\BannerFactory $bannerFactory
@@ -42,8 +42,8 @@ class Banner extends \Magento\Backend\Block\Widget\Grid\Extended implements \Mag
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Backend\Helper\Data $backendHelper,
         array $data = []
-    )
-    {
+    ) {
+    
         $this->bannerCollectionFactory = $bannerCollectionFactory;
         $this->coreRegistry            = $coreRegistry;
         $this->bannerFactory           = $bannerFactory;
@@ -81,9 +81,9 @@ class Banner extends \Magento\Backend\Block\Widget\Grid\Extended implements \Mag
             $constraint = 'related.slider_id=0';
         }
         $collection->getSelect()->joinLeft(
-            array('related' => $collection->getTable('medialounge_slider_banner_slider')),
+            ['related' => $collection->getTable('medialounge_slider_banner_slider')],
             'related.banner_id=main_table.banner_id AND '.$constraint,
-            array('position')
+            ['position']
         );
         $this->setCollection($collection);
         parent::_prepareCollection();

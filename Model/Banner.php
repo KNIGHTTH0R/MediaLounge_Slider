@@ -25,35 +25,35 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 {
     /**
      * Cache tag
-     * 
+     *
      * @var string
      */
     const CACHE_TAG = 'medialounge_slider_banner';
 
     /**
      * Cache tag
-     * 
+     *
      * @var string
      */
     protected $_cacheTag = 'medialounge_slider_banner';
 
     /**
      * Event prefix
-     * 
+     *
      * @var string
      */
     protected $_eventPrefix = 'medialounge_slider_banner';
 
     /**
      * Slider Collection
-     * 
+     *
      * @var \MediaLounge\Slider\Model\ResourceModel\Slider\Collection
      */
     protected $sliderCollection;
 
     /**
      * constructor
-     * 
+     *
      * @param \MediaLounge\Slider\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry
@@ -68,10 +68,9 @@ class Banner extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
 
-
-        array $data = []
-    )
-    {
+                array $data = []
+    ) {
+    
         $this->sliderCollectionFactory = $sliderCollectionFactory;
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }
@@ -114,7 +113,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
     public function getSlidersPosition()
     {
         if (!$this->getId()) {
-            return array();
+            return [];
         }
         $array = $this->getData('sliders_position');
         if (is_null($array)) {
@@ -136,7 +135,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
                 'main_table.slider_id=medialounge_slider_banner_slider.slider_id AND medialounge_slider_banner_slider.banner_id='.$this->getId(),
                 ['position']
             );
-            $collection->addFieldToFilter('status',1);
+            $collection->addFieldToFilter('status', 1);
 
             $this->sliderCollection = $collection;
         }

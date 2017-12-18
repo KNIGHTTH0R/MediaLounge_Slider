@@ -67,8 +67,8 @@ class Slider extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Model\ResourceModel\AbstractResource $resource = null,
         \Magento\Framework\Data\Collection\AbstractDb $resourceCollection = null,
         array $data = []
-    )
-    {
+    ) {
+    
         $this->bannerCollectionFactory = $bannerCollectionFactory;
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }
@@ -112,7 +112,7 @@ class Slider extends \Magento\Framework\Model\AbstractModel
     public function getBannersPosition()
     {
         if (!$this->getId()) {
-            return array();
+            return [];
         }
         $array = $this->getData('banners_position');
         if (is_null($array)) {

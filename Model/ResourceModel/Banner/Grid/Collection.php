@@ -6,14 +6,14 @@ class Collection extends \MediaLounge\Slider\Model\ResourceModel\Banner\Collecti
 {
     /**
      * Aggregations
-     * 
+     *
      * @var \Magento\Framework\Search\AggregationInterface
      */
     protected $aggregations;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
@@ -38,8 +38,8 @@ class Collection extends \MediaLounge\Slider\Model\ResourceModel\Banner\Collecti
         $model = 'Magento\Framework\View\Element\UiComponent\DataProvider\Document',
         $connection = null,
         \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
-    )
-    {
+    ) {
+    
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
         $this->_eventPrefix = $eventPrefix;
         $this->_eventObject = $eventObject;

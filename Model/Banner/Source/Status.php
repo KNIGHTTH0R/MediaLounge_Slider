@@ -25,6 +25,5 @@ class Status implements \Magento\Framework\Option\ArrayInterface
             ],
         ];
         return $options;
-
     }
 }

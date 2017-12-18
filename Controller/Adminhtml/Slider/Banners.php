@@ -6,14 +6,14 @@ class Banners extends \MediaLounge\Slider\Controller\Adminhtml\Slider
 {
     /**
      * Result layout factory
-     * 
+     *
      * @var \Magento\Framework\View\Result\LayoutFactory
      */
     protected $resultLayoutFactory;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\View\Result\LayoutFactory $resultLayoutFactory
      * @param \MediaLounge\Slider\Model\SliderFactory $bannerFactory
      * @param \Magento\Framework\Registry $registry
@@ -24,8 +24,8 @@ class Banners extends \MediaLounge\Slider\Controller\Adminhtml\Slider
         \MediaLounge\Slider\Model\SliderFactory $bannerFactory,
         \Magento\Framework\Registry $registry,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->resultLayoutFactory = $resultLayoutFactory;
         parent::__construct($bannerFactory, $registry, $context);
     }

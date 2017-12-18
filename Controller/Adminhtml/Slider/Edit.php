@@ -7,21 +7,21 @@ class Edit extends \MediaLounge\Slider\Controller\Adminhtml\Slider
 
     /**
      * Page factory
-     * 
+     *
      * @var \Magento\Framework\View\Result\PageFactory
      */
     protected $resultPageFactory;
 
     /**
      * Result JSON factory
-     * 
+     *
      * @var \Magento\Framework\Controller\Result\JsonFactory
      */
     protected $resultJsonFactory;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      * @param \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
      * @param \MediaLounge\Slider\Model\SliderFactory $sliderFactory
@@ -34,8 +34,8 @@ class Edit extends \MediaLounge\Slider\Controller\Adminhtml\Slider
         \MediaLounge\Slider\Model\SliderFactory $sliderFactory,
         \Magento\Framework\Registry $registry,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->resultPageFactory = $resultPageFactory;
         $this->resultJsonFactory = $resultJsonFactory;
         parent::__construct($sliderFactory, $registry, $context);

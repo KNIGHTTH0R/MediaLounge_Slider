@@ -6,7 +6,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Backend\Block\Widget\Context $context
      * @param array $data
@@ -14,8 +14,8 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
     public function __construct(
         \Magento\Backend\Block\Widget\Context $context,
         array $data = []
-    )
-    {
+    ) {
+    
         parent::__construct($context, $data);
     }
 

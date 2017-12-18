@@ -7,14 +7,14 @@ class Save extends \MediaLounge\Slider\Controller\Adminhtml\Slider
 
     /**
      * JS helper
-     * 
+     *
      * @var \Magento\Backend\Helper\Js
      */
     protected $jsHelper;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Backend\Helper\Js $jsHelper
      * @param \MediaLounge\Slider\Model\SliderFactory $sliderFactory
      * @param \Magento\Framework\Registry $registry
@@ -25,8 +25,8 @@ class Save extends \MediaLounge\Slider\Controller\Adminhtml\Slider
         \MediaLounge\Slider\Model\SliderFactory $sliderFactory,
         \Magento\Framework\Registry $registry,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->jsHelper       = $jsHelper;
         parent::__construct($sliderFactory, $registry, $context);
     }

@@ -6,21 +6,21 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
 {
     /**
      * ID Field Name
-     * 
+     *
      * @var string
      */
     protected $_idFieldName = 'banner_id';
 
     /**
      * Event prefix
-     * 
+     *
      * @var string
      */
     protected $_eventPrefix = 'medialounge_slider_banner_collection';
 
     /**
      * Event object
-     * 
+     *
      * @var string
      */
     protected $_eventObject = 'banner_collection';

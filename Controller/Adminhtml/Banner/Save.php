@@ -6,7 +6,7 @@ class Save extends \MediaLounge\Slider\Controller\Adminhtml\Banner
 {
     /**
      * JS helper
-     * 
+     *
      * @var \Magento\Backend\Helper\Js
      */
     protected $jsHelper;
@@ -24,8 +24,8 @@ class Save extends \MediaLounge\Slider\Controller\Adminhtml\Banner
         \MediaLounge\Slider\Model\BannerFactory $bannerFactory,
         \Magento\Framework\Registry $registry,
         \Magento\Backend\App\Action\Context $context
-    )
-    {
+    ) {
+    
         $this->jsHelper       = $jsHelper;
         parent::__construct($bannerFactory, $registry, $context);
     }

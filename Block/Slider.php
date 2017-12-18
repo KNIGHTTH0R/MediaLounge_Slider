@@ -8,7 +8,6 @@ use \MediaLounge\Slider\Model\Slider\Source\Animation;
 use MediaLounge\Slider\Model\SliderFactory as SliderModelFactory;
 use MediaLounge\Slider\Model\BannerFactory as BannerModelFactory;
 
-
 class Slider extends \Magento\Framework\View\Element\Template
 {
     /**
@@ -38,8 +37,8 @@ class Slider extends \Magento\Framework\View\Element\Template
         FilterProvider $filterProvider,
         Animation $animationOptions,
         array $data = []
-    )
-    {
+    ) {
+    
         $this->_sliderFactory = $sliderFactory;
         $this->_bannerFactory = $bannerFactory;
         $this->_filterProvider = $filterProvider;
@@ -86,7 +85,7 @@ class Slider extends \Magento\Framework\View\Element\Template
     public function getSliderConfigs()
     {
         $result = [];
-        if($slider = $this->getSlider()){
+        if ($slider = $this->getSlider()) {
             $result['fade'] = $slider->getData('fade') ? 'true' : 'false';
             $result['autoplaySpeed'] = $slider->getData('speed');
             $result['pauseOnHover'] = $slider->getData('pause_on_hover') ? 'true' : 'false';
@@ -123,5 +122,4 @@ class Slider extends \Magento\Framework\View\Element\Template
         $html = $this->_filterProvider->getPageFilter()->filter($value);
         return $html;
     }
-
 }

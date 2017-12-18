@@ -6,28 +6,28 @@ class BannerActions extends \Magento\Ui\Component\Listing\Columns\Column
 {
     /**
      * Url path  to edit
-     * 
+     *
      * @var string
      */
     const URL_PATH_EDIT = 'medialounge_slider/banner/edit';
 
     /**
      * Url path  to delete
-     * 
+     *
      * @var string
      */
     const URL_PATH_DELETE = 'medialounge_slider/banner/delete';
 
     /**
      * URL builder
-     * 
+     *
      * @var \Magento\Framework\UrlInterface
      */
     protected $urlBuilder;
 
     /**
      * constructor
-     * 
+     *
      * @param \Magento\Framework\UrlInterface $urlBuilder
      * @param \Magento\Framework\View\Element\UiComponent\ContextInterface $context
      * @param \Magento\Framework\View\Element\UiComponentFactory $uiComponentFactory
@@ -40,8 +40,8 @@ class BannerActions extends \Magento\Ui\Component\Listing\Columns\Column
         \Magento\Framework\View\Element\UiComponentFactory $uiComponentFactory,
         array $components = [],
         array $data = []
-    )
-    {
+    ) {
+    
         $this->urlBuilder = $urlBuilder;
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }
