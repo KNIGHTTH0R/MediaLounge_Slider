@@ -1,0 +1,39 @@
+<?php
+//$items      = $block->getItems();
+//$nav        = $block->getShowNav() ? 'true' : 'false';
+//$loop       = $block->getLoop() ? 'true' : 'false';
+//$autoHeight = $block->getAutoHeight() ? 'true' : 'false';
+$configs = $block->getSliderConfigs();
+?>
+
+
+
+<?php if ($block->getSlides()): ?>
+<div>
+	<div class="slick-slider <?php echo $block->getSliderUniqueId(); ?>">
+		<?php foreach ($block->getSlides() as $slide): ?>
+			<div class="item"><?php echo $block->getCmsFilterContent($slide->getContent()); ?></div>
+		<?php endforeach; ?>
+	</div>
+</div>
+    <script>
+        require([
+            'jquery',
+            'slick'
+        ], function () {
+            jQuery(document).ready(function () {
+                jQuery(".slick-slider.<?php echo $block->getSliderUniqueId(); ?>").slick({
+                    dots: false,
+                    arrows: false,
+                    pagination: false,
+                    infinite: true,
+                    autoplay: true,
+                    fade: <?php echo $configs['fade']; ?>,
+                    autoplaySpeed: <?php echo $configs['autoplaySpeed']; ?>,
+                    pauseOnHover: <?php echo $configs['pauseOnHover']; ?>,
+                    cssEase: '<?php echo $configs['cssEase']; ?>',
+                });
+            });
+        });
+    </script>
+<?php endif;?>

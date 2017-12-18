@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <virtualType name="MediaLoungeSliderGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MediaLoungeSliderBannerGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">MediaLounge\Slider\Model\ResourceModel\Banner\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">MediaLoungeSliderGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MediaLoungeSliderSliderGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">MediaLounge\Slider\Model\ResourceModel\Slider\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">MediaLoungeSliderGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <type name="MediaLounge\Slider\Model\ResourceModel\Banner\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">medialounge_slider_banner</argument>
+            <argument name="eventPrefix" xsi:type="string">medialounge_slider_banner_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">banner_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">MediaLounge\Slider\Model\ResourceModel\Banner</argument>
+        </arguments>
+    </type>
+    <type name="MediaLounge\Slider\Model\ResourceModel\Slider\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">medialounge_slider_slider</argument>
+            <argument name="eventPrefix" xsi:type="string">medialounge_slider_slider_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">slider_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">MediaLounge\Slider\Model\ResourceModel\Slider</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="medialounge_slider_banner_listing_data_source" xsi:type="string">MediaLounge\Slider\Model\ResourceModel\Banner\Grid\Collection</item>
+                <item name="medialounge_slider_slider_listing_data_source" xsi:type="string">MediaLounge\Slider\Model\ResourceModel\Slider\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
